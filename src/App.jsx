@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <img src="./src/assets/Pokebola.png" alt="pokebola" />
+      <img src="src\assets\mew.gif" alt="pokegif" />
     </div>
   );
 }
