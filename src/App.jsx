@@ -1,9 +1,10 @@
 import "./App.css";
+import gif from "./assets/mew.gif";
 
 function App() {
   return (
     <div className="App">
-      <img src="src/assets/mew.gif" alt="pokegif" />
+      <img src={gif} alt="pokegif" />
     </div>
   );
 }
