@@ -12,31 +12,12 @@
 
 .card {
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     background-color: white;
     border: none;
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(56, 53, 53, 0.549);
     color: gray;
-}
-
-.cardTop {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 10px 0px 10px;
-}
-
-.cardBottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    padding: 0px 15px 0px 15px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 
 .imageContainer {
@@ -45,6 +26,13 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CradialGradient id=%22radialGradientId%22 r=%22100%25%22 cx=%2250%25%22 cy=%2250%25%22 %3E %3Cstop offset=%220%25%22 stop-color=%22%238EC5FC%22 %2F%3E %3Cstop offset=%22100%25%22 stop-color=%22%23E0C3FC%22 %2F%3E %3C%2FradialGradient%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M866.5%2C647Q851%2C794%2C707%2C826Q563%2C858%2C466%2C792.5Q369%2C727%2C205.5%2C697Q42%2C667%2C123%2C529.5Q204%2C392%2C259.5%2C286Q315%2C180%2C439.5%2C159.5Q564%2C139%2C718.5%2C163Q873%2C187%2C877.5%2C343.5Q882%2C500%2C866.5%2C647Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22url(%23radialGradientId)%22 d=%22M866.5%2C647Q851%2C794%2C707%2C826Q563%2C858%2C466%2C792.5Q369%2C727%2C205.5%2C697Q42%2C667%2C123%2C529.5Q204%2C392%2C259.5%2C286Q315%2C180%2C439.5%2C159.5Q564%2C139%2C718.5%2C163Q873%2C187%2C877.5%2C343.5Q882%2C500%2C866.5%2C647Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+}
+
+.cardSummary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .pokemonName {
@@ -58,7 +46,13 @@
 .pokemonType {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 10px;
+}
+
+.PokId {
+    flex-grow: 1;
+    align-self: center;
 }
 
 @media screen and (max-width: 992px) {

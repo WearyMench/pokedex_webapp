@@ -10,13 +10,10 @@ function Card({ pokemon }) {
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.95 }}
     >
-      <div className="cardTop">
-        <div className="imageContainer">
-          <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-        </div>
-        <p>#{pokemon.id}</p>
+      <div className="imageContainer">
+        <img src={pokemon.sprites.front_default} alt={pokemon.name} />
       </div>
-      <div className="cardBottom">
+      <div className="cardSummary">
         <p className="pokemonName">{pokemon.name}</p>
         <div className="pokemonType">
           {pokemon.types.map((type, idx) => (
@@ -25,6 +22,9 @@ function Card({ pokemon }) {
             </div>
           ))}
         </div>
+      </div>
+      <div className="PokId">
+        <p>#{pokemon.id}</p>
       </div>
     </motion.div>
   );
