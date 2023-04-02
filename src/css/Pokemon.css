@@ -92,3 +92,18 @@
     align-items: center;
     justify-content: space-around;
 }
+
+@media screen and (max-width: 992px) {
+    .body {
+        flex-direction: column;
+    }
+
+    .container img {
+        width: 60%;
+        margin: 0px auto;
+    }
+
+    .summary {
+        width: 80%;
+    }
+}
