@@ -24,7 +24,7 @@ function Cards({ charge, pokemons, page, setPage, total }) {
       ) : (
         <div className="cardContainer">
           {pokemons.map((pokemon, idx) => (
-            <Link to={`/${pokemon.id}`} key={pokemon.name}>
+            <Link to={`/Pokedex/${pokemon.id}`} key={pokemon.name}>
               <Card pokemon={pokemon} key={pokemon.name} />
             </Link>
           ))}

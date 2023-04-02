@@ -33,13 +33,13 @@ function Pokemon() {
         >
           <div className="Next-Last">
             <Link
-              to={`/${id === "1" ? "1008" : Number(id) - 1}`}
+              to={`/Pokedex/${id === "1" ? "1008" : Number(id) - 1}`}
               className="PageChangeButtoms rightBorder"
             >
               Last Pokemon
             </Link>
             <Link
-              to={`/${id === "1008" ? "1" : Number(id) + 1}`}
+              to={`/Pokedex/${id === "1008" ? "1" : Number(id) + 1}`}
               className="PageChangeButtoms"
             >
               Next Pokemon
