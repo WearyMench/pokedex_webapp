@@ -1,0 +1,120 @@
+.grass {
+    background-color: green;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.poison {
+    background-color: blueviolet;
+    padding: 5px;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+.fire {
+    background-color: crimson;
+    padding: 5px;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+.flying {
+    background-color: wheat;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.water {
+    background-color: #6890F0;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.bug {
+    background-color: chartreuse;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.normal {
+    background-color: gainsboro;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.electric {
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.ground {
+    background-color: chocolate;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.fairy {
+    background-color: pink;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.fighting {
+    background-color: brown;
+    padding: 5px;
+    border-radius: 5px;
+    color: antiquewhite;
+}
+
+.psychic {
+    background-color: fuchsia;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.rock {
+    background-color: saddlebrown;
+    padding: 5px;
+    border-radius: 5px;
+    color: antiquewhite;
+}
+
+.steel {
+    background-color: gray;
+    padding: 5px;
+    border-radius: 5px;
+    color: beige;
+}
+
+.ice {
+    background-color: deepskyblue;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+.ghost {
+    background-color: darkorchid;
+    padding: 5px;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+.dragon {
+    background-color: darkslategrey;
+    padding: 5px;
+    border-radius: 5px;
+    color: beige;
+}
+
+.dark {
+    background-color: midnightblue;
+    padding: 5px;
+    border-radius: 5px;
+    color: antiquewhite;
+}

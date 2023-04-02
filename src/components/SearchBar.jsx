@@ -1,10 +1,10 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import "../css/SearchBar.css";
 
 function SearchBar({ onSearch }) {
   const [search, setSearch] = useState("");
 
-  const onChange = (e) => {
+  const onChange = async (e) => {
     setSearch(e.target.value);
     if (e.target.value.length === 0) {
       onSearch(null);
@@ -18,10 +18,12 @@ function SearchBar({ onSearch }) {
   return (
     <div className="searchbar-container">
       <div className="searchbar">
-        <input placeholder="Buscar pokemon..." onChange={onChange} />
+        <input placeholder="Name or Id of any Pokemon" onChange={onChange} />
       </div>
       <div className="searchbar-btn">
-        <button onClick={onClick}>Buscar</button>
+        <button onClick={onClick}>
+          <span className="material-symbols-outlined">search</span>
+        </button>
       </div>
     </div>
   );

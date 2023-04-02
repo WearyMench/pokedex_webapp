@@ -2,6 +2,9 @@ import React from "react";
 import Loader from "./Loader";
 import Card from "./Card";
 import Page from "./Page";
+import "../css/Cards.css";
+
+import { Link } from "react-router-dom";
 
 function Cards({ charge, pokemons, page, setPage, total }) {
   const lastPage = () => {
@@ -21,7 +24,9 @@ function Cards({ charge, pokemons, page, setPage, total }) {
       ) : (
         <div className="cardContainer">
           {pokemons.map((pokemon, idx) => (
-            <Card pokemon={pokemon} key={pokemon.name} />
+            <Link to={`/${pokemon.id}`}>
+              <Card pokemon={pokemon} key={pokemon.name} />
+            </Link>
           ))}
         </div>
       )}

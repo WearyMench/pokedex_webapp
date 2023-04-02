@@ -1,0 +1,61 @@
+#root {
+  max-width: 1280px;
+  margin: 0px auto;
+  padding: 0px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+body {
+  background: url(../assets/back-pattern.png) black;
+}
+
+.App {
+  background-color: rgba(255, 255, 255, 0.448);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: whitesmoke;
+  font-size: 40px;
+}
+
+.SearchDiv {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+  background-color: rgba(51, 45, 45, 0.649);
+  padding: 10px;
+  box-shadow: 0px 0px 5px black;
+}
+
+.tip {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: goldenrod;
+  color: white;
+  width: 30%;
+}
+
+.notFound {
+  border: 2px solid red;
+  width: 70%;
+  margin: 0px auto;
+  margin-bottom: 40px;
+  color: white;
+  background-color: rgba(165, 42, 42, 0.344);
+}
+
+@media screen and (max-width: 992px) {
+  .SearchDiv {
+    flex-direction: column;
+  }
+
+  .tip {
+    width: auto;
+  }
+}

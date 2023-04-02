@@ -1,8 +1,15 @@
 import React from "react";
+import "../css/Cards.css";
+import "../css/types.css";
+import { motion } from "framer-motion";
 
 function Card({ pokemon }) {
   return (
-    <div className="card">
+    <motion.div
+      className="card"
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.95 }}
+    >
       <div className="cardTop">
         <div className="imageContainer">
           <img src={pokemon.sprites.front_default} alt={pokemon.name} />
@@ -13,11 +20,13 @@ function Card({ pokemon }) {
         <p className="pokemonName">{pokemon.name}</p>
         <div className="pokemonType">
           {pokemon.types.map((type, idx) => (
-            <div key={idx}>{type.type.name}</div>
+            <div key={idx} className={type.type.name}>
+              {type.type.name}
+            </div>
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -1,0 +1,23 @@
+.arrow-div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    color: white;
+}
+
+.arrow {
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    background: none;
+    transition: all 300ms;
+    color: white;
+}
+
+.arrow:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    color: rgb(66, 63, 63);
+}

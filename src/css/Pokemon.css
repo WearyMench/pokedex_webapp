@@ -1,0 +1,16 @@
+.returnButton {
+    background-color: #f3eae8;
+    border: none;
+    border-radius: 10px;
+    height: 100%;
+    color: grey;
+    padding: 10px 12px;
+    margin-left: 20px;
+    transition: all 300ms ease;
+    text-decoration: none;
+}
+
+.returnButton:hover {
+    cursor: pointer;
+    background-color: #f1f7f2;
+}
