@@ -18,6 +18,7 @@ function Pokemon() {
       const data = await response.json();
       setPokemonData(data);
       setLoaded(true);
+      console.log(data);
     };
     cargarPokemon();
   }, [id]);
@@ -48,32 +49,40 @@ function Pokemon() {
           <h1>
             {PokemonData.name} N.° {PokemonData.id}
           </h1>
-
-          <div className="body">
-            <img
-              src={PokemonData.sprites.front_default}
-              alt={PokemonData.name}
-            />
-            <div className="summary">
-              <h2>Summary</h2>
-              <p>Height: {PokemonData.height / 10} m</p>
-              <p>Weight: {PokemonData.weight / 10} kg</p>
-              <div className="AbilityDiv">
-                <h4>Abilities:</h4>
-                {PokemonData.abilities.map((ability, idx) => (
-                  <p key={idx} className={ability.ability.name}>
-                    {ability.ability.name}
-                  </p>
-                ))}
-              </div>
-              <div className="types">
-                Types:
-                {PokemonData.types.map((type, idx) => (
-                  <div key={idx} className={type.type.name}>
-                    {type.type.name}
-                  </div>
-                ))}
-              </div>
+          <img src={PokemonData.sprites.front_default} alt={PokemonData.name} />
+          <div className="summary">
+            <h2>Summary</h2>
+            <p>
+              Height: <span className="color">{PokemonData.height / 10} m</span>
+            </p>
+            <p>
+              Weight:{" "}
+              <span className="color">{PokemonData.weight / 10} kg</span>
+            </p>
+            <div className="AbilityDiv">
+              <h4>Abilities:</h4>
+              {PokemonData.abilities.map((ability, idx) => (
+                <p key={idx} className={ability.ability.name}>
+                  {ability.ability.name}
+                </p>
+              ))}
+            </div>
+            <div className="types">
+              Types:
+              {PokemonData.types.map((type, idx) => (
+                <div key={idx} className={type.type.name}>
+                  {type.type.name}
+                </div>
+              ))}
+            </div>
+            <h4>Stats:</h4>
+            <div className="stats">
+              {PokemonData.stats.map((stat, idx) => (
+                <div key={idx} className="stat">
+                  {stat.stat.name} :{" "}
+                  <span className="color">{stat.base_stat}</span>
+                </div>
+              ))}
             </div>
           </div>
 

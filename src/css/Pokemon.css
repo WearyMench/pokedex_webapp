@@ -48,13 +48,9 @@
     background-color: #f1f7f2;
 }
 
-.body {
-    display: flex;
-    flex-direction: row;
-}
-
 .container img {
-    width: 40%;
+    width: 35%;
+    margin: 0px auto;
     image-rendering: pixelated;
     background-size: cover;
     background-repeat: no-repeat;
@@ -85,6 +81,10 @@
     justify-content: center;
 }
 
+.AbilityDiv p {
+    color: rgb(74, 72, 72);
+}
+
 .types {
     width: 50%;
     margin: 30px auto;
@@ -93,17 +93,33 @@
     justify-content: space-around;
 }
 
-@media screen and (max-width: 992px) {
-    .body {
-        flex-direction: column;
-    }
+.stats {
+    width: 60%;
+    margin: 0px auto;
+    margin-bottom: 25px;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
 
+.color {
+    color: rgb(64, 63, 63);
+}
+
+@media screen and (max-width: 992px) {
     .container img {
         width: 60%;
-        margin: 0px auto;
     }
 
     .summary {
         width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .stats {
+        width: 80%;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
