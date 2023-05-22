@@ -99,6 +99,10 @@
     justify-content: space-around;
 }
 
+.types div::first-letter {
+    text-transform: uppercase;
+}
+
 .stats {
     width: 60%;
     margin: 0px auto;

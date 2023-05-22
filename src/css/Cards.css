@@ -50,6 +50,10 @@
     gap: 10px;
 }
 
+.pokemonType div::first-letter {
+    text-transform: uppercase;
+}
+
 .PokId {
     flex-grow: 1;
     align-self: center;
