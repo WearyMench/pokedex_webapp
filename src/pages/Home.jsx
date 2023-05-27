@@ -39,23 +39,25 @@ function Home() {
 
   const onSearch = async (pokemon) => {
     if (!pokemon) {
+      setSearching(false);
       return fetchPokemons();
     }
     setCharge(true);
     setNotFound(false);
     setSearching(true);
     const result = await searchPokemon(pokemon);
-    if (!result) {
+    if (result.length === 0) {
       setNotFound(true);
       setCharge(false);
       return;
     } else {
-      setPokemons([result]);
+      let startIndex = page * 24;
+      let endIndex = startIndex + 24;
+      setPokemons(result.slice(startIndex, endIndex));
       setPage(0);
-      setTotal(1);
+      setTotal(Math.ceil(result.length / 24));
+      setCharge(false);
     }
-    setCharge(false);
-    setSearching(false);
   };
 
   return (
