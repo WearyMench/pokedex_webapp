@@ -2,6 +2,15 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+import {
+  Radar,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  ResponsiveContainer,
+  Tooltip,
+} from "recharts";
 
 import Loader from "../components/Loader";
 
@@ -18,11 +27,10 @@ function Pokemon() {
       const data = await response.json();
       setPokemonData(data);
       setLoaded(true);
-      console.log(data);
     };
     cargarPokemon();
   }, [id]);
-
+  console.log(PokemonData.stats);
   return (
     <>
       {loaded ? (
@@ -81,14 +89,27 @@ function Pokemon() {
               ))}
             </div>
           </div>
-          <h4>Stats:</h4>
           <div className="stats">
-            {PokemonData.stats.map((stat, idx) => (
-              <div key={idx} className="stat">
-                {stat.stat.name} :{" "}
-                <span className="color">{stat.base_stat}</span>
-              </div>
-            ))}
+            <h4>STATS:</h4>
+            {/* <BarChart width={250} height={150} data={PokemonData.stats}>
+              <XAxis dataKey="stat.name" />
+              <Tooltip />
+              <Bar dataKey="base_stat" fill="#8884d8" />
+            </BarChart> */}
+            <ResponsiveContainer width="100%" height="100%">
+              <RadarChart
+                cx="50%"
+                cy="50%"
+                outerRadius="80%"
+                data={PokemonData.stats}
+              >
+                <PolarGrid stroke="black" />
+                <PolarAngleAxis dataKey="stat.name" stroke="black" />
+                <PolarRadiusAxis stroke="black" />
+                <Tooltip />
+                <Radar dataKey="base_stat" fill="#8884d8" fillOpacity={0.6} />
+              </RadarChart>
+            </ResponsiveContainer>
           </div>
           <Link to={"/"} className="returnButton">
             Return to the Pokedex

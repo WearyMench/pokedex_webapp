@@ -1,142 +1,137 @@
 .container {
-    background-color: rgba(255, 255, 255, 0.599);
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.599);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .Next-Last {
-    width: 100%;
-    background-color: gray;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  width: 100%;
+  background-color: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .rightBorder {
-    border-right: 2px solid rgba(0, 0, 0, 0.204);
+  border-right: 2px solid rgba(0, 0, 0, 0.204);
 }
 
 .PageChangeButtoms {
-    width: 100%;
-    text-decoration: none;
-    color: white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    box-shadow: 0px 0px 1px black;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 1px black;
 }
 
 .PageChangeButtoms:hover {
-    box-shadow: 0px 0px 3px black inset;
+  box-shadow: 0px 0px 3px black inset;
 }
 
 .container h1::first-letter {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .returnButton {
-    background-color: #f3eae8;
-    border: none;
-    border-radius: 10px;
-    color: grey;
-    padding: 10px 12px;
-    transition: all 300ms ease;
-    text-decoration: none;
+  background-color: #f3eae8;
+  border: none;
+  border-radius: 10px;
+  color: grey;
+  padding: 10px 12px;
+  transition: all 300ms ease;
+  text-decoration: none;
 }
 
 .returnButton:hover {
-    cursor: pointer;
-    background-color: #f1f7f2;
+  cursor: pointer;
+  background-color: #f1f7f2;
 }
 
 .principal_div {
-    width: 40%;
-    margin: 0% auto;
+  width: 40%;
+  margin: 0% auto;
 }
 
 .container img {
-    width: 50%;
-    margin: 0px auto;
-    image-rendering: pixelated;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CradialGradient id=%22radialGradientId%22 r=%22100%25%22 cx=%2250%25%22 cy=%2250%25%22 %3E %3Cstop offset=%220%25%22 stop-color=%22%238EC5FC%22 %2F%3E %3Cstop offset=%22100%25%22 stop-color=%22%23E0C3FC%22 %2F%3E %3C%2FradialGradient%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M866.5%2C647Q851%2C794%2C707%2C826Q563%2C858%2C466%2C792.5Q369%2C727%2C205.5%2C697Q42%2C667%2C123%2C529.5Q204%2C392%2C259.5%2C286Q315%2C180%2C439.5%2C159.5Q564%2C139%2C718.5%2C163Q873%2C187%2C877.5%2C343.5Q882%2C500%2C866.5%2C647Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22url(%23radialGradientId)%22 d=%22M866.5%2C647Q851%2C794%2C707%2C826Q563%2C858%2C466%2C792.5Q369%2C727%2C205.5%2C697Q42%2C667%2C123%2C529.5Q204%2C392%2C259.5%2C286Q315%2C180%2C439.5%2C159.5Q564%2C139%2C718.5%2C163Q873%2C187%2C877.5%2C343.5Q882%2C500%2C866.5%2C647Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+  width: 50%;
+  margin: 0px auto;
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CradialGradient id=%22radialGradientId%22 r=%22100%25%22 cx=%2250%25%22 cy=%2250%25%22 %3E %3Cstop offset=%220%25%22 stop-color=%22%238EC5FC%22 %2F%3E %3Cstop offset=%22100%25%22 stop-color=%22%23E0C3FC%22 %2F%3E %3C%2FradialGradient%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M866.5%2C647Q851%2C794%2C707%2C826Q563%2C858%2C466%2C792.5Q369%2C727%2C205.5%2C697Q42%2C667%2C123%2C529.5Q204%2C392%2C259.5%2C286Q315%2C180%2C439.5%2C159.5Q564%2C139%2C718.5%2C163Q873%2C187%2C877.5%2C343.5Q882%2C500%2C866.5%2C647Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22url(%23radialGradientId)%22 d=%22M866.5%2C647Q851%2C794%2C707%2C826Q563%2C858%2C466%2C792.5Q369%2C727%2C205.5%2C697Q42%2C667%2C123%2C529.5Q204%2C392%2C259.5%2C286Q315%2C180%2C439.5%2C159.5Q564%2C139%2C718.5%2C163Q873%2C187%2C877.5%2C343.5Q882%2C500%2C866.5%2C647Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
 }
 
 .summary {
-    width: 30%;
-    height: fit-content;
-    margin: 0px auto;
-    background-color: #30a8d78e;
-    color: #fff;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  width: 30%;
+  height: fit-content;
+  margin: 0px auto;
+  background-color: #30a8d78e;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .summary p {
-    margin: 10px;
+  margin: 10px;
 }
 
 .AbilityDiv {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .AbilityDiv p {
-    color: rgb(74, 72, 72);
+  color: rgb(74, 72, 72);
 }
 
 .types {
-    width: 50%;
-    margin: 30px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  width: 50%;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .types div::first-letter {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .stats {
-    width: 60%;
-    margin: 0px auto;
-    margin-bottom: 25px;
-    text-align: left;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+  width: 90%;
+  height: 400px;
+  margin: 0px auto;
+  margin-bottom: 50px;
+  color: rgb(69, 56, 56);
+  text-align: center;
 }
 
 .color {
-    color: rgb(64, 63, 63);
+  color: rgb(64, 63, 63);
 }
 
 @media screen and (max-width: 1000px) {
-    .principal_div {
-        width: 60%;
-    }
+  .principal_div {
+    width: 60%;
+  }
 
-    .container img {
-        width: 60%;
-    }
+  .container img {
+    width: 60%;
+  }
 
-    .summary {
-        width: 80%;
-    }
+  .summary {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .container img {
-        width: 80%;
-    }
-    .stats {
-        width: 80%;
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .container img {
+    width: 80%;
+  }
 }
