@@ -17,6 +17,10 @@ function Cards({ charge, pokemons, page, setPage, total }) {
     setPage(nextPage);
   };
 
+  const goToPage = (pageNumber) => {
+    setPage(pageNumber - 1);
+  };
+
   return (
     <>
       {charge ? (
@@ -35,6 +39,7 @@ function Cards({ charge, pokemons, page, setPage, total }) {
         totalPages={total}
         onLeftClick={lastPage}
         onRightClick={nextPage}
+        onPageClick={goToPage}
       />
     </>
   );
