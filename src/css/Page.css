@@ -28,6 +28,7 @@
   align-items: center;
   gap: 10px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .arrow {
@@ -58,4 +59,44 @@
 
 .ellipsis {
   margin: 0 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .pagination {
+    gap: 8px;
+  }
+
+  .page-number {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  .arrow {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  .ellipsis {
+    margin: 0 3px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .pagination {
+    gap: 5px;
+  }
+
+  .page-number {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+
+  .arrow {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+
+  .ellipsis {
+    margin: 0 2px;
+  }
 }
