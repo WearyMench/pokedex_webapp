@@ -2,15 +2,6 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
-import {
-  Radar,
-  RadarChart,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
-  ResponsiveContainer,
-  Tooltip,
-} from "recharts";
 
 import Loader from "../components/Loader";
 
@@ -19,6 +10,7 @@ import "../css/Pokemon.css";
 function Pokemon() {
   const [PokemonData, setPokemonData] = useState([]);
   const [loaded, setLoaded] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
@@ -30,7 +22,7 @@ function Pokemon() {
     };
     cargarPokemon();
   }, [id]);
-  console.log(PokemonData.stats);
+
   return (
     <>
       {loaded ? (
@@ -58,9 +50,12 @@ function Pokemon() {
             {PokemonData.name} N.° {PokemonData.id}
           </h1>
           <div className="principal_div">
+            {!imageLoaded && <Loader />}
             <img
               src={PokemonData.sprites.front_default}
               alt={PokemonData.name}
+              onLoad={() => setImageLoaded(true)}
+              style={{ display: imageLoaded ? "block" : "none" }}
             />
             <div className="types">
               Types:
@@ -91,25 +86,21 @@ function Pokemon() {
           </div>
           <div className="stats">
             <h4>STATS:</h4>
-            {/* <BarChart width={250} height={150} data={PokemonData.stats}>
-              <XAxis dataKey="stat.name" />
-              <Tooltip />
-              <Bar dataKey="base_stat" fill="#8884d8" />
-            </BarChart> */}
-            <ResponsiveContainer width="100%" height="100%">
-              <RadarChart
-                cx="50%"
-                cy="50%"
-                outerRadius="80%"
-                data={PokemonData.stats}
-              >
-                <PolarGrid stroke="black" />
-                <PolarAngleAxis dataKey="stat.name" stroke="black" />
-                <PolarRadiusAxis stroke="black" />
-                <Tooltip />
-                <Radar dataKey="base_stat" fill="#8884d8" fillOpacity={0.6} />
-              </RadarChart>
-            </ResponsiveContainer>
+            <div className="stats-list">
+              {PokemonData.stats.map((stat, idx) => (
+                <div key={idx} className="stat-item">
+                  <span className="stat-name">{stat.stat.name}:</span>
+                  <div className="stat-bar">
+                    <div
+                      className="stat-bar-fill"
+                      style={{ width: `${(stat.base_stat / 255) * 100}%` }}
+                    >
+                      {stat.base_stat}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           <Link to={"/"} className="returnButton">
             Return to the Pokedex

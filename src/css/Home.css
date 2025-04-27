@@ -4,6 +4,7 @@
   padding: 0px;
   text-align: center;
   font-family: sans-serif;
+  margin-bottom: 120px;
 }
 
 body {
@@ -56,5 +57,166 @@ h1 {
 
   .tip {
     width: auto;
+  }
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.599);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.Next-Last {
+  width: 100%;
+  background-color: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.rightBorder {
+  border-right: 2px solid rgba(0, 0, 0, 0.204);
+}
+
+.PageChangeButtoms {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 1px black;
+}
+
+.PageChangeButtoms:hover {
+  box-shadow: 0px 0px 3px black inset;
+}
+
+.container h1::first-letter {
+  text-transform: uppercase;
+}
+
+.returnButton {
+  background-color: #f3eae8;
+  border: none;
+  border-radius: 10px;
+  color: grey;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.returnButton:hover {
+  background-color: #e0d0cc;
+}
+
+.principal_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.container img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.summary {
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.summary p {
+  margin: 5px 0;
+}
+
+.AbilityDiv {
+  margin-top: 10px;
+}
+
+.AbilityDiv p {
+  margin: 5px 0;
+}
+
+.types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.types div::first-letter {
+  text-transform: uppercase;
+}
+
+.stats {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stat-name {
+  min-width: 100px;
+}
+
+.stat-bar {
+  flex-grow: 1;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  background-color: #8884d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.color {
+  color: #8884d8;
+}
+
+@media screen and (max-width: 1000px) {
+  .principal_div {
+    flex-direction: column;
+  }
+
+  .container img {
+    max-width: 150px;
+  }
+
+  .summary {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container img {
+    max-width: 100px;
   }
 }

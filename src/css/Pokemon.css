@@ -2,6 +2,10 @@
   background-color: rgba(255, 255, 255, 0.599);
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 .Next-Last {
@@ -38,65 +42,53 @@
   border: none;
   border-radius: 10px;
   color: grey;
-  padding: 10px 12px;
-  transition: all 300ms ease;
+  padding: 10px 20px;
   text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
 }
 
 .returnButton:hover {
-  cursor: pointer;
-  background-color: #f1f7f2;
+  background-color: #e0d0cc;
 }
 
 .principal_div {
-  width: 40%;
-  margin: 0% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .container img {
-  width: 50%;
-  margin: 0px auto;
-  image-rendering: pixelated;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CradialGradient id=%22radialGradientId%22 r=%22100%25%22 cx=%2250%25%22 cy=%2250%25%22 %3E %3Cstop offset=%220%25%22 stop-color=%22%238EC5FC%22 %2F%3E %3Cstop offset=%22100%25%22 stop-color=%22%23E0C3FC%22 %2F%3E %3C%2FradialGradient%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M866.5%2C647Q851%2C794%2C707%2C826Q563%2C858%2C466%2C792.5Q369%2C727%2C205.5%2C697Q42%2C667%2C123%2C529.5Q204%2C392%2C259.5%2C286Q315%2C180%2C439.5%2C159.5Q564%2C139%2C718.5%2C163Q873%2C187%2C877.5%2C343.5Q882%2C500%2C866.5%2C647Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22url(%23radialGradientId)%22 d=%22M866.5%2C647Q851%2C794%2C707%2C826Q563%2C858%2C466%2C792.5Q369%2C727%2C205.5%2C697Q42%2C667%2C123%2C529.5Q204%2C392%2C259.5%2C286Q315%2C180%2C439.5%2C159.5Q564%2C139%2C718.5%2C163Q873%2C187%2C877.5%2C343.5Q882%2C500%2C866.5%2C647Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 .summary {
-  width: 30%;
-  height: fit-content;
-  margin: 0px auto;
-  background-color: #30a8d78e;
-  color: #fff;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .summary p {
-  margin: 10px;
+  margin: 5px 0;
 }
 
 .AbilityDiv {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
+  margin-top: 10px;
 }
 
 .AbilityDiv p {
-  color: rgb(74, 72, 72);
+  margin: 5px 0;
 }
 
 .types {
-  width: 50%;
-  margin: 30px auto;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .types div::first-letter {
@@ -104,34 +96,66 @@
 }
 
 .stats {
-  width: 90%;
-  height: 400px;
-  margin: 0px auto;
-  margin-bottom: 50px;
-  color: rgb(69, 56, 56);
-  text-align: center;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stat-name {
+  min-width: 100px;
+}
+
+.stat-bar {
+  flex-grow: 1;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  background-color: #8884d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
 }
 
 .color {
-  color: rgb(64, 63, 63);
+  color: #8884d8;
 }
 
 @media screen and (max-width: 1000px) {
   .principal_div {
-    width: 60%;
+    flex-direction: column;
   }
 
   .container img {
-    width: 60%;
+    max-width: 150px;
   }
 
   .summary {
-    width: 80%;
+    margin-top: 20px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .container img {
-    width: 80%;
+    max-width: 100px;
   }
 }
