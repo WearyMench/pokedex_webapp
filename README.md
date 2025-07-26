@@ -52,7 +52,7 @@ A modern web application built with React and Vite that allows users to browse, 
 
 ## Deployment
 
-The application is configured to work with any repository name on GitHub Pages. To deploy:
+The application is configured to work with GitHub Pages at `wearymench.github.io/pokedex_webapp/`. To deploy:
 
 1. **Using the deploy script (recommended):**
 
@@ -70,9 +70,10 @@ The application is configured to work with any repository name on GitHub Pages. 
 
 ### Important Notes
 
-- The application now uses relative paths and will work regardless of the repository name
+- The application is configured for the specific repository name `pokedex_webapp`
 - SPA routing is handled automatically for GitHub Pages
-- No configuration changes are needed when renaming the repository
+- If you rename the repository, update the `base` path in `vite.config.js` and all route paths accordingly
+- The application will be available at: https://wearymench.github.io/pokedex_webapp/
 
 ## License
 
