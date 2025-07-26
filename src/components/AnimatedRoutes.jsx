@@ -14,9 +14,8 @@ function AnimatedRoutes() {
     <AnimatePresence>
       <Routes location={Location} key={Location.pathname}>
         <Route path="/" element={<Home />} />
-        <Route path="/Pokedex/" element={<Home />} />
-        <Route path="/Pokedex/:id" element={<Pokemon />} />
-        <Route path="/Pokedex/*" element={<NotFound />} />
+        <Route path="/pokemon/:id" element={<Pokemon />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
   );

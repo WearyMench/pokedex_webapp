@@ -52,13 +52,27 @@ A modern web application built with React and Vite that allows users to browse, 
 
 ## Deployment
 
-To deploy the application to GitHub Pages, run:
+The application is configured to work with any repository name on GitHub Pages. To deploy:
 
-```bash
-npm run deploy
-# or
-yarn deploy
-```
+1. **Using the deploy script (recommended):**
+
+   ```bash
+   npm run deploy
+   # or
+   yarn deploy
+   ```
+
+2. **Manual deployment:**
+   ```bash
+   npm run build
+   # Then upload the contents of the 'dist' folder to your GitHub Pages branch
+   ```
+
+### Important Notes
+
+- The application now uses relative paths and will work regardless of the repository name
+- SPA routing is handled automatically for GitHub Pages
+- No configuration changes are needed when renaming the repository
 
 ## License
 

@@ -25,3 +25,6 @@ git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:WearyMench/Pokedex.git main:gh-pages
+
+# Alternative: Use gh-pages package (recommended)
+# npm run deploy
